@@ -6,7 +6,7 @@ After obtaiing the API key from your Ignyte Instance Settings Area, click 'Autho
 
 # Directory Structure
 
-## The `openapi` folder
+## The `OpenAssetsAPI` folder
 
 This folder contains the Ignyte Platform's Asset API entrypoint within `openapi.yaml`.
 
