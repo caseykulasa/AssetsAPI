@@ -1,0 +1,52 @@
+get:
+  tags:
+    - ExternalAsset
+  summary: List all asset available in the application for a given asset type.
+  parameters:
+    - name: assettype
+      in: path
+      description: Name of asset type.
+      required: true
+      schema:
+        type: string
+        description: Name of asset type.
+        nullable: true
+    - name: page
+      in: query
+      description: Page number if asset count is greater than page size.
+      schema:
+        type: integer
+        description: Page number if asset count is greater than page size.
+        format: int32
+        default: 1
+    - name: pagesize
+      in: query
+      description: Page size default and max is 100
+      schema:
+        type: integer
+        description: Page size default and max is 100
+        format: int32
+        default: 100
+  responses:
+    '200':
+      description: Success
+      content:
+        text/plain:
+          schema:
+            type: array
+            items:
+              type: string
+        application/json:
+          schema:
+            type: array
+            items:
+              type: string
+        text/json:
+          schema:
+            type: array
+            items:
+              type: string
+    '204':
+      description: Success
+    '500':
+      description: Server Error

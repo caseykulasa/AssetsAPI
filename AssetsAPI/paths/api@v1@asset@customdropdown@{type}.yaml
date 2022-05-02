@@ -1,0 +1,36 @@
+get:
+  tags:
+    - ExternalAsset
+  summary: List all custom dropdown fields available for an asset type.
+  parameters:
+    - name: type
+      in: path
+      description: Name of asset type
+      required: true
+      schema:
+        type: string
+        description: Name of asset type
+        nullable: true
+  responses:
+    '200':
+      description: Success
+      content:
+        text/plain:
+          schema:
+            type: array
+            items:
+              type: string
+        application/json:
+          schema:
+            type: array
+            items:
+              type: string
+        text/json:
+          schema:
+            type: array
+            items:
+              type: string
+    '204':
+      description: Success
+    '500':
+      description: Server Error

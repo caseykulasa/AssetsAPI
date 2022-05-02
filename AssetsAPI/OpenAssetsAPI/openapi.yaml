@@ -1,0 +1,38 @@
+openapi: 3.0.1
+info:
+  title: Ignyte Asset API
+  description: 'List of endpoints of Asset API to manage the data for each tenants  '
+  termsOfService: 'https://ignyteplatform.com/terms-of-service/'
+  contact:
+    name: Ignyte Platform
+    email: Info@Ignyteplateform.com
+  version: v1.0
+paths:
+  /api/v1/asset/assettypes:
+    $ref: paths/api@v1@asset@assettypes.yaml
+  '/api/v1/asset/{assettype}/fields':
+    $ref: 'paths/api@v1@asset@{assettype}@fields.yaml'
+  /api/v1/asset/assettype:
+    $ref: paths/api@v1@asset@assettype.yaml
+  /api/v1/asset/impacts:
+    $ref: paths/api@v1@asset@impacts.yaml
+  /api/v1/asset/locations:
+    $ref: paths/api@v1@asset@locations.yaml
+  '/api/v1/asset/departments/{location}':
+    $ref: 'paths/api@v1@asset@departments@{location}.yaml'
+  '/api/v1/asset/assets/{assettype}':
+    $ref: 'paths/api@v1@asset@assets@{assettype}.yaml'
+  '/api/v1/asset/customdropdown/{type}':
+    $ref: 'paths/api@v1@asset@customdropdown@{type}.yaml'
+  '/api/v1/asset/{assetId}':
+    $ref: 'paths/api@v1@asset@{assetId}.yaml'
+components:
+  securitySchemes:
+    Bearer:
+      type: apiKey
+      description: Please enter into field the word 'Bearer' following by space and API key
+      name: Authorization
+      in: header
+security:
+  - Bearer: []
+    TenantCode: []

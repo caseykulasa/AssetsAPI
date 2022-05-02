@@ -1,0 +1,4 @@
+type: apiKey
+description: Please enter into field the word 'Bearer' following by space and API key
+name: Authorization
+in: header

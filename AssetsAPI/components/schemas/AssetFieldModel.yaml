@@ -1,0 +1,26 @@
+type: object
+properties:
+  assetTypeName:
+    type: string
+    nullable: true
+  assetId:
+    type: string
+    format: uuid
+  general:
+    type: object
+    additionalProperties:
+      type: string
+    nullable: true
+  assignment:
+    type: object
+    additionalProperties:
+      type: string
+    nullable: true
+  assetTypes:
+    type: object
+    additionalProperties:
+      type: object
+      additionalProperties:
+        type: string
+    nullable: true
+additionalProperties: false

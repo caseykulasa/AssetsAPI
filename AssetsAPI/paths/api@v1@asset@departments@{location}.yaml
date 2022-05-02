@@ -1,0 +1,36 @@
+get:
+  tags:
+    - ExternalAsset
+  summary: List all departments available in the application for given location.
+  parameters:
+    - name: location
+      in: path
+      description: Name of Location for which department to be listed.
+      required: true
+      schema:
+        type: string
+        description: Name of Location for which department to be listed.
+        nullable: true
+  responses:
+    '200':
+      description: Success
+      content:
+        text/plain:
+          schema:
+            type: array
+            items:
+              type: string
+        application/json:
+          schema:
+            type: array
+            items:
+              type: string
+        text/json:
+          schema:
+            type: array
+            items:
+              type: string
+    '204':
+      description: Success
+    '500':
+      description: Server Error

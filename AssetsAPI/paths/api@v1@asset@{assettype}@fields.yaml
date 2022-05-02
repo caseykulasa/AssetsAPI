@@ -1,0 +1,44 @@
+get:
+  tags:
+    - ExternalAsset
+  summary: >-
+    List the structure of all fields available to create a new asset e.g default
+    fields, custom fields etc.
+  parameters:
+    - name: assettype
+      in: path
+      description: Name of the asset type for which fields information needed.
+      required: true
+      schema:
+        type: string
+        description: Name of the asset type for which fields information needed.
+        nullable: true
+  responses:
+    '200':
+      description: Success
+      content:
+        text/plain:
+          schema:
+            $ref: ..\components\schemas\AssetFieldModel.yaml
+        application/json:
+          schema:
+            $ref: ..\components\schemas\AssetFieldModel.yaml
+        text/json:
+          schema:
+            $ref: ..\components\schemas\AssetFieldModel.yaml
+    '204':
+      description: Success
+    '400':
+      description: Bad Request
+      content:
+        text/plain:
+          schema:
+            $ref: ..\components\schemas\ProblemDetails.yaml
+        application/json:
+          schema:
+            $ref: ..\components\schemas\ProblemDetails.yaml
+        text/json:
+          schema:
+            $ref: ..\components\schemas\ProblemDetails.yaml
+    '500':
+      description: Server Error
