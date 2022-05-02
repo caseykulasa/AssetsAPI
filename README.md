@@ -4,6 +4,16 @@ The full Swagger API can be found at the [Ignyte Platform Swagger](https://integ
 
 After obtaiing the API key from your Ignyte Instance Settings Area, click 'Authorize" in the Swagger link above. Next, enter ``Bearer <api key>`` 
 
+Next, use cURL to call the data. An example request URL is ``https://integration.ignyteplatform.com/api/v1/asset/<path>`` where path can be asset type, impacts, locations, departments, fields, custom drop down, etc. Please note: some paths require additional path information. For example:
+
+``curl -X 'GET' \
+  'https://integration.ignyteplatform.com/api/v1/asset/departments/westfield' \
+  -H 'accept: text/plain'``
+  
+The location 'westfield' must be defined before requesting department data. 
+
+Finally, assets can be deleted by asset ID and only asset types may be defined using the post method.
+
 # Directory Structure
 
 ## The `OpenAssetsAPI` folder
