@@ -2,7 +2,7 @@
 
 The full Swagger API can be found at the [Ignyte Platform Swagger](https://integration.ignyteplatform.com/swagger/index.html).
 
-After obtaining the API key from your Ignyte Instance Settings Area, click 'Authorize" in the Swagger link above, then enter the ``Bearer <api key>``. 
+After obtaining the API key from your Ignyte Instance Settings Area, click "Authorize" in the Swagger link above, then enter the ``Bearer <api key>``. 
 
 Next, use cURL to call the data. An example request URL is ``https://integration.ignyteplatform.com/api/v1/asset/<path>`` where path can be asset type, impacts, locations, departments, fields, custom drop down, etc. Please note: some paths require additional path information. For example:
 
